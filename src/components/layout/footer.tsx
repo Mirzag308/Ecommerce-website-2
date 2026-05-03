@@ -72,8 +72,8 @@ export function Footer() {
               <Link to="/category/men" className="text-muted-foreground hover:text-primary transition-colors">
                 Men's Fashion
               </Link>
-              <Link to="/category/women" className="text-muted-foreground hover:text-primary transition-colors">
-                Women's Fashion
+              <Link to="/category/child" className="text-muted-foreground hover:text-primary transition-colors">
+                child's Fashion
               </Link>
               <Link to="/category/electronics" className="text-muted-foreground hover:text-primary transition-colors">
                 Electronics

@@ -1,3 +1,4 @@
+// src/pages/Wishlist.tsx
 import { useWishlist } from "@/store/wishlist";
 import { ProductCard } from "@/components/product-card";
 

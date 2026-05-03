@@ -43,7 +43,7 @@ export function Header() {
 
   const categories = [
     { name: "Men", href: "/category/men" },
-    { name: "Women", href: "/category/women" },
+    { name: "Child", href: "/category/Child" },
     { name: "Electronics", href: "/category/electronics" },
     { name: "Home & Garden", href: "/category/home" },
     { name: "Sports", href: "/category/sports" },
@@ -93,27 +93,9 @@ export function Header() {
             </Link>
           </nav>
 
-          {/* Search */}
-          {/* <div className="hidden lg:flex items-center space-x-2 flex-1 max-w-md mx-6">
-            <div className="relative w-full">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-              <Input
-                type="search"
-                placeholder="Search products..."
-                className="pl-10 bg-muted/50"
-              />
-            </div>
-          </div> */}
-
           {/* Actions */}
           <div className="flex items-center space-x-2">
             <ThemeToggle />
-
-            {/* <Button variant="ghost" size="icon" asChild>
-              <Link to="/search" className="lg:hidden">
-                <Search className="h-5 w-5" />
-              </Link>
-            </Button> */}
 
             <Button variant="ghost" size="icon" asChild>
               <Link to="/wishlist">
@@ -124,7 +106,8 @@ export function Header() {
             <Button variant="ghost" size="icon" className="relative" asChild>
               <Link to="/cart">
                 <ShoppingCart className="h-5 w-5" />
-                {totalItems > 0 && (
+                {/* ✅ FIX: Added isLoggedIn check here */}
+                {isLoggedIn && totalItems > 0 && (
                   <Badge
                     variant="destructive"
                     className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 text-xs"

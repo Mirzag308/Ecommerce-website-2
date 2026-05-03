@@ -1,3 +1,4 @@
+// src/pages/ProductPage.tsx
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import { Heart, Share2, Star, Plus, Minus, ShoppingCart, Truck, Shield, RotateCcw} from "lucide-react"
@@ -290,7 +291,8 @@ const ProductPage = () => {
                     <div className="flex items-center justify-between mb-1">
                       <div className="flex items-center gap-2">
                         <img
-                          src="http://localhost:8000/media/icons/icon.png"
+                          // src="http://localhost:8000/media/icons/icon.png"
+                          src={`${import.meta.env.VITE_BASE_URL || "http://localhost:8000"}/media/icons/icon.png`}
                           alt="User Icon"
                           className="w-6 h-6 rounded-full"
                         />
